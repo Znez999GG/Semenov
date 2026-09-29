@@ -298,7 +298,7 @@ std::cout << "\n" << sumpol;
 std::cout << "\n" << sumotr;
 std::cout << "\n" << sred;
 */
-
+/*
 const int row = 3, col = 3;
 
 int arr[row][col];
@@ -314,12 +314,23 @@ for (int i = 0; i < row; i++)
 	}
 	std::cout << "\n";
 }
-
-
-
-//fgdfgfd
-
-
+*/
+int randomNumber = 0;
+const int size= 10;
+int arr[size]{ randomNumber };
+for (int i = 0; i < size; i++)
+{
+	arr[i] = randomNumber = rand() % 10;
+	if (randomNumber == 0)
+	{
+		randomNumber = -1;
+		std::cout << arr[i];
+	}
+	else
+	{
+		std::cout << "arr[i]\n";
+	}
+}
 
 	return 0;
 }
