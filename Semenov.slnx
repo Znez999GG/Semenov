@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Semenov/Semenov.vcxproj" Id="08d85a26-df3d-4997-9591-a56cb36991be" />
+</Solution>
