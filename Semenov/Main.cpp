@@ -315,22 +315,57 @@ for (int i = 0; i < row; i++)
 	std::cout << "\n";
 }
 */
+/*int g = 0;
 int randomNumber = 0;
-const int size= 10;
+const int size= 5;
 int arr[size]{ randomNumber };
 for (int i = 0; i < size; i++)
 {
-	arr[i] = randomNumber = rand() % 10;
+	arr[i] = randomNumber = rand() % 11 - 5;
 	if (randomNumber == 0)
 	{
-		randomNumber = -1;
-		std::cout << arr[i];
+		g++;
+		if (size == i + 1) 
+		{
+			for (int j = 0; j < g; j++)
+			{
+				randomNumber = -1;
+				std::cout << " " << arr[j] ;
+			}
+		}
+
+
 	}
-	else
+	else if(randomNumber !=0)
 	{
-		std::cout << "arr[i]\n";
+		std::cout << arr[i] << " ";
 	}
+
 }
+*/
+const int row = 3, col = 4;
+
+int arr[row][col];
+int randomNumber;
+int summa = 0;
+int summa1;
+for (int i = 0; i < row; i++)
+{
+	int summa = 0;
+	for (int j = 0; j < col; j++)
+	{
+
+		arr[i][j] = rand() % 10;
+		std::cout << arr[i][j] << " ";
+		summa += arr[i][j];
+;
+	}
+
+	std::cout << "| " << summa << "\n";
+
+}
+
+
 
 	return 0;
 }
