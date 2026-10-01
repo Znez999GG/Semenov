@@ -426,21 +426,55 @@ double delen(double number1, double number2)
 	return number1 / number2;
 }
 
+double mypow(double number1, double number2)
+{
+	int mpow = number1;
+	
+	for (int i = 1; i < number2; i++)
+	{
+		mpow *= number1;
+		
+	}
+	return mpow;
+}
+
+void Printarr(int name[], int length)
+{
+	for (int i = 0; i < length; i++)
+	{
+		std::cout << name[i] << " ";
+	}
+}
+
+void Setarr(int name[], int length)
+{
+	for (int i = 0; i < length; i++)
+	{
+		name[i] = rand() % 6;
+	}
+}
+
+
+
+
+
 int main()
 {
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	srand(time(NULL));
-	double a;
+	/*double a;
 	double b;
-	char comand;
+	//char comand;
+	
 	std::cout << "Введите число n1\n";
 	std::cin >> a;
-	std::cout << "Введите действие\n";
-	std::cin >> comand;
+	//std::cout << "Введите действие\n";
+	//std::cin >> comand;
 	std::cout << "Введите число n2\n";
 	std::cin >> b;
-
+	double mpow = a;
+	/*
 	if (comand == '+')
 	{
 		std::cout << sum(a, b);
@@ -457,10 +491,34 @@ int main()
 	{
 		std::cout << delen(a, b);
 	}
+	
+	
 
+	std::cout << mypow(a, b);
+	*/
+
+	const int size = 5;
+	int arr[size]{};
+	Setarr(arr, size);
+	Printarr(arr, size);
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
