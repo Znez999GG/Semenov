@@ -54,7 +54,7 @@ int main()
 
 
 }
-*/
+
 
 
 int main()
@@ -147,8 +147,8 @@ int main()
 		std::cout << "x1=" << x1 << "\n";
 		std::cout << "x2=" << x2 << "\n";
 	}
-	*/
-/*
+	
+
 
 
 
@@ -245,8 +245,8 @@ int main()
 		}
 	}
 
-*/
-/*const int size = 5;
+
+const int size = 5;
 //тип_данных имя_массива[кол-во_ячеек]
 //int arr[5]{4, 66, 7, 5654, 5};
 int arr[]{4, 66, 7, 5654, 5};
@@ -272,8 +272,8 @@ for (int i = 0; i < size; i++)
 {
 	std::cout << arr[i] << " ";
 };
-*/
-/*
+
+
 int randomNumber = rand() % 21 - 10;
 const int size = 10;
 int arr[size]{randomNumber};
@@ -297,8 +297,8 @@ sred = (sumpol + sumotr) / size;
 std::cout << "\n" << sumpol;
 std::cout << "\n" << sumotr;
 std::cout << "\n" << sred;
-*/
-/*
+
+
 const int row = 3, col = 3;
 
 int arr[row][col];
@@ -314,8 +314,8 @@ for (int i = 0; i < row; i++)
 	}
 	std::cout << "\n";
 }
-*/
-/*int g = 0;
+
+int g = 0;
 int randomNumber = 0;
 const int size= 5;
 int arr[size]{ randomNumber };
@@ -342,7 +342,7 @@ for (int i = 0; i < size; i++)
 	}
 
 }
-*/
+
 const int row = 3, col = 4;
 
 int arr[row][col];
@@ -369,3 +369,98 @@ for (int i = 0; i < row; i++)
 
 	return 0;
 }
+*/
+/*
+//функция 
+void Printhello()
+{
+	int a = 0;
+	std::cout << "hello\n";
+
+}
+void PrintNum(int number)
+{
+	number += 100;
+	if (number > 0)
+	{
+		return
+	}
+	std::cout << number << "\n";
+}
+
+int Sum(int one, int two)
+{
+	return one + two;
+}
+
+int main()
+{
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
+	srand(time(NULL));
+
+	int a = 210;
+
+	std::cout << Sum(5, Sum(5, 10));
+
+
+
+	return 0;
+}
+*/
+
+double sum(double number1, double number2)
+{
+	return number1 + number2;
+}
+double minus(double number1, double number2)
+{
+	return number1 - number2;
+}
+double umnoz(double number1, double number2)
+{
+	return number1 * number2;
+}
+double delen(double number1, double number2)
+{
+	return number1 / number2;
+}
+
+int main()
+{
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
+	srand(time(NULL));
+	double a;
+	double b;
+	char comand;
+	std::cout << "Введите число n1\n";
+	std::cin >> a;
+	std::cout << "Введите действие\n";
+	std::cin >> comand;
+	std::cout << "Введите число n2\n";
+	std::cin >> b;
+
+	if (comand == '+')
+	{
+		std::cout << sum(a, b);
+	}
+	else if (comand == '-')
+	{
+		std::cout << minus(a, b);
+	}
+	else if (comand == '*')
+	{
+		std::cout << umnoz(a, b);
+	}
+	else if (comand == '/' & b!=0)
+	{
+		std::cout << delen(a, b);
+	}
+
+
+	return 0;
+}
+
+
+
