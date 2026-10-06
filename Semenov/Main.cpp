@@ -21,7 +21,7 @@ int main()
 /*
 	Типы данных
 
-	bool                    true/false  o-false 
+	bool                    true/false  o-false
 							все кроме 0 это true
 	char					'+'		43		-128 -- 127
 	unsigned char			'#'				0 - 255
@@ -65,7 +65,7 @@ int main()
 /*
 	double a = 4.3;
 	double b = 4.3;
-	
+
 	if (a  == b)
 	{
 		std::cout << "Seva";
@@ -115,8 +115,8 @@ int main()
 		{
 			std::cout << "действие невозможно";
 		}
-		
-	
+
+
 
 	double a = 0, b = 0, c = 0, d = 0, x1 = 0, x2 = 0;
 	std::cout << "Введите а\n";
@@ -125,7 +125,7 @@ int main()
 	std::cin >> b;
 	std::cout << "Введите c\n";
 	std::cin >> c;
-	
+
 	std::cout << "формула дискриминанта";
 	std::cout << "ax^2 + bx + c = 0\n";
 	std::cout << a << "x^2+" << b << "x+" << c << "=0\n\n";
@@ -147,7 +147,7 @@ int main()
 		std::cout << "x1=" << x1 << "\n";
 		std::cout << "x2=" << x2 << "\n";
 	}
-	
+
 
 
 
@@ -325,7 +325,7 @@ for (int i = 0; i < size; i++)
 	if (randomNumber == 0)
 	{
 		g++;
-		if (size == i + 1) 
+		if (size == i + 1)
 		{
 			for (int j = 0; j < g; j++)
 			{
@@ -371,7 +371,7 @@ for (int i = 0; i < row; i++)
 }
 */
 /*
-//функция 
+//функция
 void Printhello()
 {
 	int a = 0;
@@ -388,10 +388,7 @@ void PrintNum(int number)
 	std::cout << number << "\n";
 }
 
-int Sum(int one, int two)
-{
-	return one + two;
-}
+
 
 int main()
 {
@@ -409,6 +406,15 @@ int main()
 }
 */
 
+int Sum(int one, int two)
+{
+	return one + two;
+}
+
+double Sum(double one, double two)
+{
+	return one + two;
+}
 double sum(double number1, double number2)
 {
 	return number1 + number2;
@@ -429,11 +435,11 @@ double delen(double number1, double number2)
 double mypow(double number1, double number2)
 {
 	int mpow = number1;
-	
+
 	for (int i = 1; i < number2; i++)
 	{
 		mpow *= number1;
-		
+
 	}
 	return mpow;
 }
@@ -455,8 +461,56 @@ void Setarr(int name[], int length)
 }
 
 
+template <typename T1, typename Max>
+T1 Substruct(T1 one, Max two)
+{
 
+	return one - two;
 
+}
+
+int summaka(int one, int two)
+{
+	{
+		if (one == 0)
+			return 0;
+	}
+
+	if (two == 0)
+	{
+		return 0;
+	}
+	{
+		if (two == 1)
+			return one;
+	}
+	{
+		if (two < 0)
+			return summaka(-one, -two);
+	}
+
+	return one + summaka(one, two - 1);
+}
+
+int fak(int num)
+{
+	if (num < 0)
+	{
+		return 0;
+	}
+
+	if (num == 0)
+	{
+		return 1;
+	}
+	return num * fak(num - 1);
+
+}
+int main()
+{
+	Substruct(3, 4);
+
+}
 
 int main()
 {
@@ -466,7 +520,7 @@ int main()
 	/*double a;
 	double b;
 	//char comand;
-	
+
 	std::cout << "Введите число n1\n";
 	std::cin >> a;
 	//std::cout << "Введите действие\n";
@@ -491,8 +545,8 @@ int main()
 	{
 		std::cout << delen(a, b);
 	}
-	
-	
+
+
 
 	std::cout << mypow(a, b);
 	*/
@@ -504,21 +558,3 @@ int main()
 
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
