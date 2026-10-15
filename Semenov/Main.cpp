@@ -405,7 +405,7 @@ int main()
 	return 0;
 }
 */
-
+/*
 int Sum(int one, int two)
 {
 	return one + two;
@@ -512,6 +512,12 @@ int main()
 
 }
 
+
+
+
+
+
+
 int main()
 {
 	SetConsoleCP(CP_UTF8);
@@ -528,7 +534,7 @@ int main()
 	std::cout << "Введите число n2\n";
 	std::cin >> b;
 	double mpow = a;
-	/*
+	
 	if (comand == '+')
 	{
 		std::cout << sum(a, b);
@@ -549,12 +555,194 @@ int main()
 
 
 	std::cout << mypow(a, b);
-	*/
+	
 
 	const int size = 5;
 	int arr[size]{};
 	Setarr(arr, size);
 	Printarr(arr, size);
+
+	return 0;
+}
+*/
+/*
+
+int Sum(int one, int two)
+{
+	return one + two;
+}
+
+double Sum(double one, int two)
+{
+	return one + two;
+}
+
+
+void PrintArr(int name[], int length)
+{
+
+	for (int i = 0; i < length; i++)
+	{
+		std::cout << name[i] << " ";
+	}
+}
+
+void FillArray(int name[], int length)
+{
+
+	for (int i = 0; i < length; i++)
+	{
+		name[i] = rand() % 10 - 1;
+	}
+
+}
+
+void FillArray(double name[], int length)
+{
+
+	for (int i = 0; i < length; i++)
+	{
+
+		name[i] = (rand() % 10 + 1) + (double)(rand() % 9 + 1) / 10;
+	}
+
+}
+
+void FillArray(char name[], int length)
+{
+	for (int i = 0; i < length; i++)
+	{
+		name[i] = rand() % 10 - 1;
+
+	}
+
+}
+
+
+template <typename T1, typename Max>
+T1 Substruct(T1 one, T1 two)
+{
+	return one - two;
+
+}
+
+int Fak(int num)
+{
+	if (num < 0)
+	{
+		return 0;
+	}
+	if (num == 0)
+	{
+		return 1;
+	}
+	return num * Fak(num - 1);
+
+}
+
+
+template <typename T1, typename Max>
+T1 Substruct(T1 one, T1 two)
+{
+	return one - two;
+
+}
+
+int Fak(int num1, int num2)
+{
+	int Sum = 0;
+
+	if (num2 == 0)
+	{
+		return 0;
+	}
+
+	return num1 + Fak(num1, num2 - 1);
+
+}
+
+*/
+
+void Myswap(int* a, int* b)
+{
+	int c = *a;
+	*a = *b;
+	*b = c;
+}
+
+void Myswap(int &a, int &b)
+{
+	int c = a;
+	a = b;
+	b = c;
+}
+
+
+void FillArray(int *ar, int size) //реализовать без []
+{
+	for (int i=0; i < size; i++)
+	{ 
+		*(ar + i) = rand() % 10;
+	}
+}
+
+int* lol()
+{
+	int* car = new int;
+}
+
+int main()
+{
+
+
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8); //		1251
+	srand(time(NULL));
+
+
+	/*
+	int one = 10, two = 25;
+	int* ptrone = &one;
+	int* ptrtwo = &two;
+
+
+
+	std::cout << one << " " << two << "\n";
+	Myswap(one, two);
+	//реализовать myspaw
+	std::cout << one << " " << two << "\n";
+	*/
+
+	/*
+	const int size = 5;
+	int arr[size]{1, 2, 3, 4, 5};
+
+	FillArray(arr, size);
+
+
+	
+	std::cout << arr << "\n";
+	std::cout << *arr << "\n";
+	std::cout << arr + 1<< "\n";
+	std::cout << *(arr + 1) << "\n";
+	*/
+	int a = 5;
+
+	int* car = new int;
+
+	int* asd =lol();
+
+	delete asd;
+
+	delete car;
+	
+	asd = nullptr;
+	car = nullptr;
+
+
+
+	
+
 
 	return 0;
 }
