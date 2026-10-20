@@ -712,7 +712,6 @@ int main()
 	//реализовать myspaw
 	std::cout << one << " " << two << "\n";
 	*/
-
 	/*
 	const int size = 5;
 	int arr[size]{1, 2, 3, 4, 5};
