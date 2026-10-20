@@ -662,7 +662,7 @@ int Fak(int num1, int num2)
 }
 
 */
-
+/*
 void Myswap(int* a, int* b)
 {
 	int c = *a;
@@ -690,11 +690,71 @@ int* lol()
 {
 	int* car = new int;
 }
+*/
+
+void PushArray(int* &arr, int &size)
+{
+
+	int* temp = new int[size];
+	
+	for (int i = 0; i < size; i++)
+	{
+		temp[i] = arr[i];
+	}
+	delete[] arr;
+	size++;
+	arr = new int[size];
+	for (int i = 0; i < size-1; i++)
+	{
+		arr[i] = temp[i];
+	}
+	delete[] temp;
+	arr[size - 1] = 100;
+}
+
+void PushArray2(int*& arr, int& size)
+{
+	size++;
+
+	int* temp = new int[size];
+
+	for (int i = 0; i < size-1; i++)
+	{
+		temp[i] = arr[i];
+	}
+	temp[size - 1] = 100;
+	std::swap(arr, temp);
+	delete[] temp;
+
+}
+void RandArray(int*& arr, int& size)
+{
+	for (int i = 0; i < size - 1; i++)
+	{
+		int j = rand() % 10;
+		arr[i] = j;
+	}
+}
+void NewArry(int*& arr, int& size)
+{
+	if (arr != nullptr) 
+	{
+		delete[] arr;
+	}
+	int* arr = new int[size];
+}
+void delArry(int*& arr)
+{
+	if (arr == nullptr)
+	{
+		return;
+	}
+	delete[] arr;
+	arr = nullptr;
+}
 
 int main()
 {
-
-
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8); //		1251
 	srand(time(NULL));
@@ -725,7 +785,7 @@ int main()
 	std::cout << arr + 1<< "\n";
 	std::cout << *(arr + 1) << "\n";
 	*/
-	int a = 5;
+	/*int a = 5;
 
 	int* car = new int;
 
@@ -736,11 +796,88 @@ int main()
 	delete car;
 	
 	asd = nullptr;
-	car = nullptr;
+	car = nullptr;*/
+	/*
+	int row = 3, col = 4;
+
+	int** name = new int* [row];
+	for (int i = 0; i < row; i++)
+	{
+		name[i] = new int[col];
+	}
+	name[1][2] = 100;
+	
+
+	for (int i = 0; i < row; i++)
+	{
+		delete[] name[i];
+	}
+
+	delete[] name;
 
 
+	name = nullptr;
+	*/
+	/*
+	int side = 2, row = 4, col1 = 4, col2 = 3;
+
+	int*** seva = new int**[side];
+
+	for (int i = 0; i < side; i++)
+	{
+		seva[i] = new int* [row];
+	}
+
+	for (int i = 0; i < side; i++)
+	{
+		seva[0][i] = new int[col1];
+	}
+
+	seva[1][0] = new int[2];
+	for (int i = 1; i < side; i++)
+	{
+		seva[1][i] = new int[col2];
+	}
+
+
+	for (int i = 1; i < side; i++)
+	{
+		delete[] seva[0][i];
+	}
+	for (int i = 1; i < side; i++)
+	{
+		delete[] seva[1][i];
+	}
+	for (int i = 1; i < side; i++)
+	{
+		delete[] seva[i];
+	}
+	delete[] seva;
+	*/
 
 	
+	int size = 5;
+	int* arr = new int[size] {5, 6, 7, 23, 2};
+	arr = nullptr;
+	/*
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	std::cout << "\n";*/
+	NewArry(arr, size);
+	RandArray(arr, size);
+
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+	delete[] arr;
+	
+
+
+
+
 
 
 	return 0;
