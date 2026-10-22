@@ -1,5 +1,9 @@
+#define NOMINMAX
 #include <iostream> 
 #include <Windows.h>
+#include <string>
+#include <limits>
+
 /*
 int main()
 
@@ -691,7 +695,7 @@ int* lol()
 	int* car = new int;
 }
 */
-
+/*
 void PushArray(int* &arr, int &size)
 {
 
@@ -752,7 +756,7 @@ void delArry(int*& arr)
 	delete[] arr;
 	arr = nullptr;
 }
-
+*/
 int main()
 {
 	SetConsoleCP(CP_UTF8);
@@ -854,8 +858,7 @@ int main()
 	}
 	delete[] seva;
 	*/
-
-	
+	/*
 	int size = 5;
 	int* arr = new int[size] {5, 6, 7, 23, 2};
 	arr = nullptr;
@@ -864,7 +867,7 @@ int main()
 	{
 		std::cout << arr[i] << " ";
 	}
-	std::cout << "\n";*/
+	std::cout << "\n";
 	NewArry(arr, size);
 	RandArray(arr, size);
 
@@ -873,7 +876,92 @@ int main()
 		std::cout << arr[i] << " ";
 	}
 	delete[] arr;
+	*/
+	/*
+	std::string name = "Text";
+	std::string one = name + " new\n";
+	std::string* ptr = nullptr;
+	ptr = new std::string[10];
+	delete[] ptr;
+
+	std::string arr[5]{ "Text", "Ivan", "Garlir", "Apple", "Bio ware Rip" };
+	//auto it = std::find(arr->begin() + 1, arr->end(), "apple");
+
+	//name.erase(2);
+
+
+	for (int i = 0; i < name.size(); i++)
+	{
+		if (name[i] == 'T')
+		{
+			name[i] = 't';
+		}
+		std::cout << name;
+	}
+	*/
+
+
+
+/*
+	std::string one;
+	int num = 0;
+
+	// откуда взять текст, куда его присвоить
+	std::getline(std::cin, one);
+	std::cout << one << "\n";
+
+	std::getline(std::cin, one, '\n');
+	std::cin >> num;
+	std::cout << num << "\n";
+
+	//std::cin.ignore(32767, '\n'); // норм вариант
 	
+	// top вариант
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');/////////////////////////////////////////////////////////////////////
+
+
+	std::getline(std::cin, one);
+	std::cout << one << "\n";
+	*/
+
+std::string login = "q";
+std::string pass = "q";
+
+
+while (login.size() <= 5 && login.size() > !15)
+{
+	std::cout << "Придумайте логин\n";
+	std::getline(std::cin, login);
+	
+}
+while (pass.size() <= 5 && pass.size() > !15)
+{
+	std::cout << "Придумайте пароль \n";
+	std::getline(std::cin, pass);
+}
+std::string newlogin = "q";
+std::string newpass = "q";
+while (newlogin != login || newpass != pass)
+{
+	std::cout << "\nВведите логин \n";
+	std::getline(std::cin, newlogin);
+	std::cout << "Введите пароль \n";
+	std::getline(std::cin, newpass);
+	if (newlogin != login || newpass != pass)
+	{
+		std::cout << "Логин или пароль не верный\n";
+	}
+}
+std::cout << "Вы успешно зашли в аккаунт";
+
+
+
+
+
+
+
+
+
 
 
 
