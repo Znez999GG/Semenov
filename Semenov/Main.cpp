@@ -928,13 +928,13 @@ std::string login = "q";
 std::string pass = "q";
 
 
-while (login.size() <= 5 && login.size() > !15)
+while (login.size() <= 5 || login.size() > 15)
 {
 	std::cout << "Придумайте логин\n";
 	std::getline(std::cin, login);
 	
 }
-while (pass.size() <= 5 && pass.size() > !15)
+while (pass.size() <= 5 || pass.size() > 15)
 {
 	std::cout << "Придумайте пароль \n";
 	std::getline(std::cin, pass);
